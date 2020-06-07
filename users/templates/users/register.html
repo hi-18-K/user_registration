@@ -1,0 +1,29 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'users/bs/css/flatly.min.css' %}" />
+    <link rel="stylesheet" href="{% static '/users/styles.css' %}" type="text/css">
+  </head>
+  <body>
+  <div class="loginbox">
+    <form class="" action="" method="POST">
+      {% csrf_token %}
+      <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Manage your tasks with a ToDo!</legend>
+        {{ form|crispy }}
+      </fieldset>
+      <div class="form-group">
+        <button type="submit" name="button" class="btn btn-primary">SignUp</button>
+      </div>
+    </form>
+    <div class="border-top pt-3">
+      <small class="text-muted">
+        <a class="ml-2" href="{% url 'index' %}">Already have an account?SignIn</a>
+      </small>
+    </div>
+  </div>
+</body>
+</html>

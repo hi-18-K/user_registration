@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'users/bs/css/flatly.min.css' %}" />
+    <link rel="stylesheet" href="{% static '/users/styles.css' %}" type="text/css">
+  </head>
+  <body>
+    <div class="loginbox">
+      <h4>You have been logged out.</h4>
+      <div class="text-muted">
+        {% csrf_token %}
+          Already have an account?<a class="ml-2" href="{% url 'login' %}"><br>logIn again</a>
+        <br><br>
+          Don't have an account?<a class="ml-2" href="{% url 'register' %}"><br>Register</a>
+      </div>
+    </div>
+
+  </body>
+  </html>
