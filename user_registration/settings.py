@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('eadc608c1509f348b3938ecc497b02e81c83784d72c9aacc')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['my-event-registration-app.herokuapp.com/']
+ALLOWED_HOSTS = ['my-evant-registration-app.herokuapp.com/']
 
 
 # Application definition
