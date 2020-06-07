@@ -12,7 +12,7 @@
     <form class="" action="" method="POST">
       {% csrf_token %}
       <fieldset class="form-group">
-        <legend class="border-bottom mb-4">Manage your tasks with a ToDo!</legend>
+        <legend class="border-bottom mb-4" style="color:white;">Manage your tasks with a ToDo!</legend>
         {{ form|crispy }}
       </fieldset>
       <div class="form-group">
@@ -21,7 +21,7 @@
     </form>
     <div class="border-top pt-3">
       <small class="text-muted">
-        <a class="ml-2" href="{% url 'index' %}">Already have an account?SignIn</a>
+        <a class="ml-2" href="{% url 'login' %}">Already have an account?SignIn</a>
       </small>
     </div>
   </div>
